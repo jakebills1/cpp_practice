@@ -1,0 +1,11 @@
+initialize miles, gallons, average, tankCounter = 0, runningTotal = 0
+prompt user for input
+while user does not enter -1
+  read in miles
+    check if miles is -1
+  read in gallons 
+  save miles / gallons in average
+  print average to stdout
+  add average to running total 
+  increment TankCounter
+  print runningTotalMiles / tankCounter
