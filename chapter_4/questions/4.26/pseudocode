@@ -1,0 +1,6 @@
+write a program that returns true if the five digit parameter it is called on is a palindrome
+
+method:
+  write function called palindromeTest that takes an int as a parameter
+  peel off each digit using the % 10 and / 10 method and store each in a variable called dig1,,,dig5
+  if dig1 = dig5 and dig2 = dig4, return true. else returm false

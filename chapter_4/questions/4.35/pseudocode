@@ -1,0 +1,26 @@
+design an application to read in a 4 digit integer and encrypt it by: 
+  replace each digit with the results of adding 7 to the digit, and getting it's remainder after dividing by 10
+  swap the first and third digits, and second and fourth digits. 
+make this application able to decrypt numbers encrypted via this scheme
+
+method
+  write a class with the following member functions: encrypt, decrypt
+    encrypt:
+      takes a four digit number, if the digit is positive, and four digits, sets in equal to plaintext
+      initialize four variables: dig1, dig2, dig3, dig4
+      using the mod 10, divide by ten method to modify the plaintext, store each successive (digit + 7) % 10
+      print the following: dig3, dig4, dig1, dig2
+    decrypt:
+      takes a four digit number, ciphertext
+      initialize 4 variables, dig1,,dig4
+      dig2 = ciphertext mod 10
+      ciphertext = ciphertext / 10
+      dig1 = ciphertext mod 10
+      ciphertext = ciphertext / 10
+      dig4 = ciphertext mod 10
+      ciphertext = ciphertext / 10
+      dig3 = ciphertext
+      for each successive dig
+        dig = (dig - 7 + 10) % 10
+      print dig1, dig2, dig3, dig4
+
