@@ -1,0 +1,13 @@
+write a program that determines the largest number of ten inputted by the user
+method:
+  initialize input variable of type int 
+  initialize compare variable
+  initialize counter variable and set equal to 1
+  while counter is less than 11 ( loop runs ten times )
+    ask user for input, store in input variable
+    if counter = 1
+      compare = input
+    else
+      if input is greater than compare, store inputs value in compare
+    increment counter
+  return compare

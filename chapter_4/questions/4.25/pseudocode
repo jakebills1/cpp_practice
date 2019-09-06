@@ -1,0 +1,13 @@
+write a function that takes as input the size, as an int, of one side of a square. Then print a hollow square made up of asterisks.
+
+method
+  initialive int size
+  initialise int counter to 1
+  initialive string ast = "*"
+  initialive string blank = " "
+  ask user for input, validate input to be an int between 1 and 20
+  store input in size
+  start a loop that will run size times. this will print rows.
+    on the first run, when counter = 1, print size numbers of asterisks using a loop that runs size times
+    on runs that are not equal to 1 or size, print an asterisk, size - 2 number of blanks, then an asterisk\
+    on the run where counter = size, print size numbers of asterisks

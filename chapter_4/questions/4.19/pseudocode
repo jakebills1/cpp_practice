@@ -1,0 +1,20 @@
+write a program that deternines the two largest numbers inputted by the user
+
+method
+  initialize counter to 1
+  initialize input 
+  initialize largest
+  initialize second_largest
+  while counter is less than 11, so loop runs 10 times
+    ask user for input
+    store that input in input variable
+    if counter is 1
+      store input in largest
+      store input in second_largest
+    else
+      if input is larger than largest
+        sotre input in largest
+      else if input is greater than second_largest
+        store input in second_largest
+    increment counter
+  return largest and second_largest
