@@ -1,21 +1,46 @@
-* argument coercion
-  * refers to the c++ compiler's ability to convert certain data types when a function is called with arguments that do not match it's prototype. an int can be converted to a double. a double can be converted to an int, though its decimal part will be truncated, resulting in data loss
-    * this can result in undefined behavior and incorrect results. 
-* storage class: the period in which the identifier exists in memory. Can range from brief to the entire execution of the program
-  * auto: variables local to a function that exist only when the function is being executed. Default for local vars
-  * register: "suggests" to the compiler that the variable be stored in the computers hardware register. Frequently used variables like a counter may see performance benefits by being set as register
-  * static: variables that stay in memory during entire execution of program
-    * extern: refers to global variables
-    * local: local variables declared as static will retain their value between calls to a function
-* scope
-  * function scope: labels ( start: ) have function scope
-  * global namespace scope: an identifier declared outside any function or class
-  * local scope: identifiers within a block, or set of curly braces, or function parameters
-  * function-prototype scope: names used in the arguments list in a function prototype
-  * class scope:
-  * namespace scope:
-* call stack
-  * is a stack data structure (LIFO). Each time a function calls another function, an activation record or stack frame is pushed onto the call stack. it contains the return address that the called function needs to return to the calling function
-* other c++ keywords:
-  * inline: when used before a function definition ( not a function prototype), it requests that the compiler not make a function call, but copy the function into main. this saves stack space, but may results in multiple copies of the function being in main
-  * const: before a a variable, indicates that a function will not change the value of that variable. 
+- argument coercion
+  - refers to the c++ compiler's ability to convert certain data types when a function is called with arguments that do not match it's prototype. an int can be converted to a double. a double can be converted to an int, though its decimal part will be truncated, resulting in data loss
+    - this can result in undefined behavior and incorrect results.
+- storage class: the period in which the identifier exists in memory. Can range from brief to the entire execution of the program
+  - auto: variables local to a function that exist only when the function is being executed. Default for local vars
+  - register: "suggests" to the compiler that the variable be stored in the computers hardware register. Frequently used variables like a counter may see performance benefits by being set as register
+  - static: variables that stay in memory during entire execution of program
+    - extern: refers to global variables
+    - local: local variables declared as static will retain their value between calls to a function
+- scope
+  - function scope: labels ( start: ) have function scope
+  - global namespace scope: an identifier declared outside any function or class
+  - local scope: identifiers within a block, or set of curly braces, or function parameters
+  - function-prototype scope: names used in the arguments list in a function prototype
+  - class scope:
+  - namespace scope:
+- call stack
+  - is a stack data structure (LIFO). Each time a function calls another function, an activation record or stack frame is pushed onto the call stack. it contains the return address that the called function needs to return to the calling function
+- other c++ keywords:
+  - inline: when used before a function definition ( not a function prototype), it requests that the compiler not make a function call, but copy the function into main. this saves stack space, but may results in multiple copies of the function being in main
+  - const: before a a variable, indicates that a function will not change the value of that variable.
+- reference and reference parameters
+  - pass-by-value: when the function is called on an argument, a copy of that value is passed to the function, not the arguement itself. changes to the copy do not effect the value of the variable in the calling function
+  - pass-by-reference: passes the memory address of the argument to the function, thus the called function can modify the value of a variable in the calling function
+    - the following `int &count;` means count is a reference to an int
+  - references as aliases within function
+    - references aliasing other variables cannot be reassigned and cannot be initialized without receing a value
+      - operations performed on the reference are actually performed on the variable they refer to
+  - functions that return references:
+    - functions can return a reference but if the variable they refer to is an automatic variable it is discarded when the function returns control to the calling function. this reference is now a dangling reference and can cause undefined behavior
+- default function parameters:
+  - function parameters must be the rightmost parameter in the arguments list
+- unary scope resolution operators ( :: )
+  - can be used to refer to a global variable in a local of the same exists in the same scope
+    - this is the prefferred way to refer to global variables, since it reduces the risk of scoping errors and makes your code more readable
+- function overloading
+  - you can write two functions with the same name, but different signatures, and the c++ compiler can decide which is the appropriate
+    - writing functions with the same identifier and paramter list is a compilation error
+- function templates
+  - a more concise way of function overloading is writing a template, so similar logic can be performed on different datatypes
+- recursion
+  - a recursive function is a function that calls itself
+    - though main can call itself, it should not, nor should it be called from another program
+  - base case: this is all the function can solve. if the base case can not be solved, it calls itself on a progressively smaller version of the input until the base case can be solved, which returns a value to the previous call, and so forth, until the original call is reached
+  - recursion results in an exponential growth of function calls. calculating the 20th fibonacci number requires 2 ^ 20, or 1 million, function calls
+- any recursive problem can be solved with iteration, with less overhead of function calls. recursion should be used where a recursive solution matches the problem more closely. it should not be used where performance is important 
