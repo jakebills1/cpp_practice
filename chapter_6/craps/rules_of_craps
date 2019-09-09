@@ -1,0 +1,5 @@
+a player makes a roll of two six-sided die
+  if the total of the faces is 7 or 11 the player wins
+  if the sum is 2, 3, or 12, the player loses. 
+  if the sum is 4,5,6,8,9, or 10, that sum becomes the players "point"
+    the player rolls again until the roll their point. if they roll a 7 before making their point, they lose.

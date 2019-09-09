@@ -1,0 +1,12 @@
+write a program that takes an integer as input, which will be the number of integers to be summed
+
+method:
+  main should call a function, sum, which takes an argument ( int n ) which will be the number of inputs it will take, before summing them
+  sum: 
+    initialize a variable times, set it equal to n, if n is positive
+    initialize a variable, sum, to 0
+    for times:
+      ask user for input
+      add input to sum
+    return sum
+      
