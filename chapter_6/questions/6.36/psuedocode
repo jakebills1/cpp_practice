@@ -1,0 +1,4 @@
+write a recursive function, power, that takes two arguments, base and exponent
+base case: base ^ 1 = base
+recursion: base ^ exp = base * base ^ exp - 1
+  base = power(base, exp - 1)

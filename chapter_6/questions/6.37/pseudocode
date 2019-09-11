@@ -1,0 +1,21 @@
+write an iterative function to determine the nth fibonacci number
+  1: use type int
+  2: use type double
+
+method:
+need to loop n times, storing the results of n - 1 loop, and n - 2 loop after the first and second repetition.
+  store two ints int1 and int2, initialize first to 0 and second to 1
+  for loop n times:
+    if first time:
+      print first int(0)
+    if second time
+      print second int(1)
+    else
+      print sum of two ints
+      int1 = n 
+      int2 = int1
+alternate:
+  fibonacci is a function with 1/2 static local variables, which will be used to keep track of previous values in the fibonacci sequence
+    for n times
+      call fibonacci(i)
+        if this is the first call to fibonacci, return 0
