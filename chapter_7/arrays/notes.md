@@ -1,11 +1,26 @@
-* in c++, arrays are consecutive memory locations of the same type. 
-  * declared like `type arrayName[size]`
-  * initializing arrays
-    * the values in static arrays are initialized to 0, they are not in automatic variables
-  * passing arrays to function:
-    * in cpp, arrays are pass-by-reference. one typically passes the array size at the same time. just pass the array name into the function
-      * according to the principle of least privilege, outside functions should not modify arrays in main. declaring an array as const prevents this, as it will result in a compliation error
-    * individual array elements are pass by value
-* searching
-  * linear:
-    * good for small arrays or unsorted arrays 
+- in c++, arrays are consecutive memory locations of the same type.
+  - declared like `type arrayName[size]`
+  - initializing arrays
+    - the values in static arrays are initialized to 0, they are not in automatic variables
+  - passing arrays to function:
+    - in cpp, arrays are pass-by-reference. one typically passes the array size at the same time. just pass the array name into the function
+      - according to the principle of least privilege, outside functions should not modify arrays in main. declaring an array as const prevents this, as it will result in a compliation error
+    - individual array elements are pass by value
+- searching
+  - linear:
+    - good for small arrays or unsorted arrays
+- sorting
+  - insertion
+    - at the first element, look at the next element and insert it before the first one, if it is smaller
+- vectors
+  - more fully featured version of array, that protects against out of bounds errors and such
+  - by default, all values in a vector are initialized to 0, when declared
+  - vectors have a member function, size, which returns the number of elements in the vector as a size_t
+    - as such, loop control variables should be a size_t as well, since comparing an int and a size_t could cause compilation issues
+  - vectors can be compared using equality operators
+  - one vector can be initialized with the contents of another
+  - vectors have amember function, at, which accesses an element at the given index. if the index is out-of-range, at will throw an error
+- exceptions
+  - in a try-catch block, if an error is thrown in the try block, it terminates and the catch block begins executing
+    - the catch block derclares a type of error(out of range)and an exception parameter(ex)
+      - the exception parameter has a member function, what, which retrieves and displays the error message in the exception object 
