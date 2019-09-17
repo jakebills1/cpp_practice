@@ -1,0 +1,8 @@
+- search algorithms
+  - linear search: testing whether each successive element is the search value
+    - time efficiency: O(n)
+      - in the worst case, the desired value is last, so it could take n operations to perform the search
+  - binary search: on a sorted array, the middle element is tested. if it is not the search key, the half of the vector that could not contain the desired value is discarded, and the process is repeated until the desired value is found
+    - ONLY WORKS ON SORTED ARRAY
+      - this makes it only worthwhile if the array will be searched many times
+    - 
