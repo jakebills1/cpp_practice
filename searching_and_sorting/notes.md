@@ -1,8 +1,19 @@
 - search algorithms
   - linear search: testing whether each successive element is the search value
-    - time efficiency: O(n)
+    - time efficiency: O(n) aka linear time
       - in the worst case, the desired value is last, so it could take n operations to perform the search
   - binary search: on a sorted array, the middle element is tested. if it is not the search key, the half of the vector that could not contain the desired value is discarded, and the process is repeated until the desired value is found
     - ONLY WORKS ON SORTED ARRAY
       - this makes it only worthwhile if the array will be searched many times
-    - 
+    - time effiency: O(log n) aka logarithmic time
+- sorting algorithms
+  - selection sort
+    - easy to implement, but inefficient 
+    - time efficiency: O(n<sup>2</sup>)
+  - insertion sort
+    - also simple but inefficent
+    - time efficiency: O(n^2)
+  - merge sort
+    - more efficient than insertion or selection 
+    - first split larger unsorted vector into two equal sized sub-vectors
+    - time efficiency: O(n log n)
