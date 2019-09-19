@@ -17,3 +17,6 @@
     - more efficient than insertion or selection 
     - first split larger unsorted vector into two equal sized sub-vectors
     - time efficiency: O(n log n)
+  - bubble sort
+    - using two nested loops, compare each pair of values and swap them if they are out of order. repeat until completely sorted
+    - time efficiency: O(n^2)

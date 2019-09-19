@@ -3,6 +3,6 @@
 using namespace std;
 int main()
 {
-  BubbleSort myBSort(45);
+  BubbleSort myBSort(10);
   myBSort.sort();
 }

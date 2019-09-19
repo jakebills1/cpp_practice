@@ -24,14 +24,16 @@ void BubbleSort::sort()
   cout << "data pre sort: \n";
   displayElements();
   int temp;
+  int j = 1;
   while(!isSorted()) // while isSorted does not return true
   {
     // iterate over data, swapping pairs of element that are out of order
-    for(int i = 0; i < size - 1; ++i)
+    for(int i = 0; i < size - j; ++i)
     {
       if (data[i] > data[i + 1])
         swap(i, i + 1);
     }
+    ++j;
     displayElements();
   }
   cout << "data post sort: \n";
